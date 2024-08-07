@@ -1,0 +1,480 @@
+body {
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 10px 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 1;
+}
+
+.logo {
+  width: 175px;
+  height: 100px;
+  padding-left: 10px;
+}
+
+nav ul {
+  list-style: none;
+}
+
+li {
+  display: inline-block;
+  padding-right: 15px;
+}
+
+.navigationlinks {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: sans-serif;
+  text-decoration: none;
+}
+
+.navbutton {
+  display: inline-flex;
+  height: 50px;
+  background: #4b6993;
+  margin-right: 50px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+
+.navbutton:hover{
+  background-color: #40597c;
+}
+
+.navbutton:active{
+  background-color: #2e405a;
+}
+
+.navbuttontext,
+.navbuttonicon {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 15px;
+  height: 100%;
+  color: white;
+}
+
+.navbuttonicon {
+  font-size: 1.5em;
+  background-color: rgba(0,0,0,0.08);
+}
+
+.TopPanel {
+  display:flex;
+  background-color: #4b6993;
+  padding-left: 100px;
+  align-items: center;
+  height: 800px;
+}
+
+.Frontpagecar {
+  flex: 1;
+  width: 900px;
+  height: 450px;
+}
+
+.TopPanelContainer {
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.TopPanelContainer p {
+  margin: 0;
+}
+
+.TopPanelTitleContainer .TopPanelText {
+  align-self: flex-start;
+  margin-left: 50px;
+}
+
+.TopPanelTitle{
+  font-size: 80px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.TopPanelText{
+  font-size: 30px;
+  font-family: sans-serif;
+}
+
+.ReserveButton {
+  display: inline-flex;
+  height: 50px;
+  background: rgb(218, 218, 218);
+  margin-top: 20px;
+  margin-right: 50px;
+  margin-left: 70px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+
+.ReserveButton:hover{
+  background-color: rgb(134, 134, 134);
+}
+
+.ReserveButton:active{
+  background-color: rgb(63, 63, 63);
+}
+
+.ReserveText,
+.ReserveIcon {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 15px;
+  height: 100%;
+  color: #4b6993;
+}
+
+.ReserveIcon {
+  font-size: 1.5em;
+  background-color: rgba(0,0,0,0.08);
+  z-index: 0;
+}
+
+.MiddlePanel {
+  display: flex;
+  justify-content: center;
+  height: 500px;
+  background-image: url(MapsGS.png);
+  background-size: cover;
+  background-position: center;
+  flex-direction: column;
+  margin-top: 0px;
+}
+
+.MiddlePanelTextContainer {
+  vertical-align: top;
+  flex-grow: 1;
+  padding-top: 100px;
+  text-align: center;
+  color: #3b5374;
+}
+
+.MiddlePanelTitle {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.MiddlePanelTextContainer p {
+  font-size: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.MiddleIcon {
+  background-color: white;
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 15px;
+  height: 100%;
+  color: #4b6993;
+  font-size: 3em;
+  border: 2px solid #4b6993;
+  border-radius: 10px;
+}
+
+.MiddleList {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-family: sans-serif;
+  margin: 20px; /* Remove any default margin */
+  padding: 20px; /* Remove any default padding */
+  list-style: none; /* Remove any default list style */
+}
+
+.MiddleList li {
+  text-align: center;
+  align-items: center;
+  padding: 50px 0; /* Add some padding between list items */
+}
+
+.Middle1,
+.Middle2,
+.Middle3 {
+  font-size: 28px;
+}
+
+.Middle1Text,
+.Middle2Text,
+.Middle3Text {
+  font-size: 20px;
+}
+
+.BottomPanel {
+  background-color: #2e405a;
+  padding: 40px 0;
+  height: 200px;
+}
+
+.BottomContainer {
+  width: 1200px;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 20px;
+}
+
+.logo img {
+  width: 200px; /* adjust the logo width to your liking */
+  height: 125px;
+}
+
+.newsletter {
+  margin-left: 20px;
+}
+
+.newsletter h3 {
+  font-weight: bold;
+  margin-top: 0;
+}
+
+.newsletter form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.newsletter input[type="email"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 250px; /* adjust the input width to your liking */
+}
+
+.newsletter button[type="submit"] {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}
+
+.newsletter button[type="submit"]:hover {
+  background-color: #444;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.popup.show {
+  display: block;
+}
+
+.popup-content {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 300px;
+}
+
+.popup-content form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.popup-content input[type="email"],
+.popup-content input[type="password"] {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+}
+
+.popup-content button[type="submit"] {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}
+
+#close-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.FAQPanel {
+  display: flex;
+  align-items: center;
+  top: 10px;
+  left: 10px;
+  background-color: #40597c;
+  justify-content: center;
+  height: 100vh; /* This will make the FAQPanel take up the full height of the viewport */
+}
+
+.FAQTitle {
+  font-size: 30px;
+  font-weight: bold;
+
+}
+
+.FAQcontainer {
+  text-align: left;
+  width: 80%;
+  max-width: 600px;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+  cursor: pointer;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-question {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.faq-answer {
+  font-size: 20px;
+  display: flex;
+  margin-left: 20px;
+}
+
+.faq-answer p {
+  margin: 0;
+}
+
+/* Popup styles */
+
+.popup {
+  /* Position the popup absolutely */
+  position: fixed;
+  margin-top: 50px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Create a semi-transparent background */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Hide the popup by default */
+  display: none;
+}
+
+.popup-content {
+  /* Position the popup content relatively */
+  position: relative;
+  /* Center the popup content horizontally and vertically */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Set the width and padding of the popup content */
+  width: 400px;
+  padding: 20px;
+  /* Set the background color and border of the popup content */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  /* Add some box shadow to give it a nice effect */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.PopUpTitle {
+  /* Style the popup title */
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.popup-content label {
+  /* Style the labels */
+  display: block;
+  margin-bottom: 10px;
+}
+
+.popup-content select, .popup-content input[type="text"] {
+  /* Style the select and input fields */
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+}
+
+.popup-content button[type="submit"] {
+  /* Style the submit button */
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popup-content button[type="submit"]:hover {
+  /* Style the submit button on hover */
+  background-color: #3e8e41;
+}
+
+#close-popup {
+  /* Style the close button */
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+#close-popup ion-icon {
+  /* Style the close icon */
+  font-size: 24px;
+  color: #666;
+}

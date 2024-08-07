@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Home | AZoom Car Rental</title>
+        <link rel="stylesheet" href="AZoomCarRentalStyle.css">
+        <script src="AZoomCarRentalScript.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav class="navlinks">
+                <a href="index.html"><img class="logo" src="AZoomLogo.jpg"></a>
+                <ul>
+                    <li><a class="navigationlinks" href="AZoomFAQ.html" id="FAQ">FAQ</a></li>
+                    <li>
+                        <button type="button" class="navbutton" id="loginbutton" onclick="showLoginForm()">
+                            <span class="navbuttontext">
+                                Login
+                            </span>
+                            <span class="navbuttonicon">
+                                <ion-icon name="log-in-outline"></ion-icon>
+                            </span>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="TopPanel">
+                <div class="TopPanelContainer">
+                    <p>
+                        <span class="TopPanelTitle">
+                            Electrify<br>
+                            Your Ride
+                        </span>
+                    </p>
+                    <p>
+                        <span class="TopPanelText">
+                            Rent an electric car and<br>
+                            join the movement towards a<br>
+                            cleaner, healthier planet.
+                        </span>
+                        <button type="button" class="ReserveButton" id="book-now-button">
+                        <span class="ReserveText">
+                            Book now
+                        </span>
+                        <span class="ReserveIcon">
+                            <ion-icon name="car-sport-outline"></ion-icon>
+                        </span>
+                        </button>
+                    </p>
+                </div>
+                    <img class="Frontpagecar" src="TeslaRoadster1.png">
+            </div>
+            <!-- Popup form -->
+            <div class="popup" id="book-now-popup">
+                <div class="popup-content">
+                    <h2 class="PopUpTitle">Book Your Electric Car</h2>
+                    <form>
+                        <label for="pickup-location">Pickup Location:</label>
+                        <select id="pickup-location">
+                            <option value="location-1">30 Minbu Rd, Singapore 308177</option>
+                            <option value="location-2">628A Bukit Batok Central, Singapore 651628</option>
+                        </select><br><br>
+                        <label for="car-model">Car Model:</label>
+                        <select id="car-model">
+                            <option value="">Select a car model</option>
+                            <option value="Tesla Model 3">Tesla Model 3</option>
+                            <option value="Tesla Model S">Tesla Model S</option>
+                            <option value="Tesla Model X">Tesla Model X</option>
+                            <option value="Nissan Leaf">Nissan Leaf</option>
+                            <option value="Hyundai Kona Electric">Hyundai Kona Electric</option>
+                            <option value="Audi e-tron">Audi e-tron</option>
+                            <option value="Jaguar I-PACE">Jaguar I-PACE</option>
+                            <option value="BMW i3">BMW i3</option>
+                            <option value="Chevrolet Bolt">Chevrolet Bolt</option>
+                        </select><br><br>
+                        <label for="pickup-date">Pickup Date:</label>
+                        <input type="date" id="pickup-date"><br><br>
+                        <label for="return-date">Return Date:</label>
+                        <input type="date" id="return-date"><br><br>
+                        <button type="submit">Search</button>
+                    </form>
+                    <button id="close-popup"><ion-icon name="close-outline"></ion-icon></button>
+                </div>
+            </div>
+            <!-- JavaScript to toggle popup -->
+            <script>
+                const bookNowButton = document.getElementById('book-now-button');
+                const popup = document.getElementById('book-now-popup');
+                const closePopupButton = document.getElementById('close-popup');
+              
+                bookNowButton.addEventListener('click', () => {
+                popup.style.display = 'block';
+                });
+              
+                closePopupButton.addEventListener('click', () => {
+                popup.style.display = 'none';
+                });
+                
+                const pickupDateInput = document.getElementById('pickup-date');
+                const returnDateInput = document.getElementById('return-date');
+
+                pickupDateInput.addEventListener('input', () => {
+                    const pickupDate = new Date(pickupDateInput.value);
+                    const returnDate = new Date(returnDateInput.value);
+
+                    if (returnDate < pickupDate) {
+                        alert('Return date cannot be before pickup date');
+                        returnDateInput.value = '';
+                    }
+                });
+            </script>
+            <div class="MiddlePanel">
+                <div class="MiddlePanelTextContainer">
+                    <span class="MiddlePanelTitle">Why AZoom Rental?</span>
+                    <p>Saving our planet has never been more important than ever before. We at AZoom dedicate ourselves to our customers 
+                        and our planet first in reducing carbon admissions and have dedicated ourselves into getting the poeple to 
+                        use more clean and electric cars to ensure both the custoemrs and the planet both enjoy!</p>
+                </div>
+                <div>
+                    <ul class="MiddleList">
+                        <li>
+                            <span class="MiddleIcon"><ion-icon name="log-in-outline"></ion-icon></span><br><br>
+                            <span class="Middle1">Sign up easily</span><br><br>
+                            <span class="Middle1Text">Registration is fast and easy! Just sign up with MyInfo for instant verification.</span>
+                        </li>
+                        <li>
+                            <span class="MiddleIcon"><ion-icon name="checkmark-done-outline"></ion-icon></span><br><br>
+                            <span class="Middle2">No deposits required</span><br><br>
+                            <span class="Middle2Text">You only need to pay for the hours and mileage used. That's it!</span>
+                        </li>
+                        <li>
+                            <span class="MiddleIcon"><ion-icon name="car-sport-outline"></ion-icon></span><br><br>
+                            <span class="Middle3">Rent at your convenience</span><br><br>
+                            <span class="Middle3Text">2 Shops located around central of Singapore for everyone's convinience</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+           <!-- Bottom Panel -->
+            <div class="BottomPanel">
+                <div class="BottomContainer">
+                    <div class="footer-content">
+                        <!-- Logo on the right side -->
+                        <div class="logo">
+                            <img src="AZoomLogoT.png" alt="Company Logo">
+                        </div>
+                        <!-- Newsletter Subscription -->
+                        <div class="newsletter">
+                            <h3>Stay Updated</h3>
+                            <p>Subscribe to our newsletter to receive the latest news and updates.</p>
+                            <form>
+                                <input type="email" name="email" placeholder="Enter your email address">
+                                <button type="submit">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- Login Form (hidden by default) -->
+        <div id="login-popup" class="popup">
+            <div class="popup-content">
+            <form action="action_page.php" method="post">
+                <p>Email</p>
+                <input type="email">
+                <p>Password</p>
+                <input type="password">
+                <button type="submit">Login</button>
+                <ion-icon name="close-outline" id="close-icon"></ion-icon>
+            </form>
+            </div>
+        </div>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </body>
+</html>
+
+<!-- Catergorizing data like customers, cars, location, policies -->
+ <!-- Hosting on netify, Github, W2schools -->
+  <!--  -->

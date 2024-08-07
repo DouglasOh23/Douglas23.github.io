@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Home | AZoom Car Rental</title>
+        <link rel="stylesheet" href="AZoomCarRentalStyle.css">
+        <script src="AZoomCarRentalScript.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav class="navlinks">
+                <a href="index.html"><img class="logo" src="AZoomLogo.jpg"></a>
+                <ul>
+                    <li><a class="navigationlinks" href="AZoomFAQ.html" id="FAQ">FAQ</a></li>
+                    <li>
+                        <button type="button" class="navbutton" id="loginbutton" onclick="showLoginForm()">
+                            <span class="navbuttontext">
+                                Login
+                            </span>
+                            <span class="navbuttonicon">
+                                <ion-icon name="log-in-outline"></ion-icon>
+                            </span>
+                        </button>
+                    </li>s
+                </ul>
+            </nav>
+        </header>
+        <div class="FAQPanel">
+            <div class="FAQcontainer">
+                <span class="FAQTitle"><h2>Frequently Asked Questions</h2></span>
+                <div id="faq-accordion">
+                    <!-- FAQ Item 1 -->
+                    <div class="faq-item">
+                        <h3 class="faq-question">What is this service about?</h3>
+                        <div class="faq-answer">
+                            <p>This service is about providing electric cars for rent to customers who want to reduce their carbon footprint and contribute to a cleaner environment.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 2 -->
+                    <div class="faq-item">
+                        <h3 class="faq-question">How do I get started?</h3>
+                        <div class="faq-answer">
+                            <p>To get started, you can visit our website and select the car model you want to rent. Then, choose the pickup location and the dates you want to book it for.</p>
+                        </div>
+                    </div>
+                <!-- FAQ Item 3 -->
+                <div class="faq-item">
+                  <h3 class="faq-question">What are the benefits of using this service?</h3>
+                  <div class="faq-answer">
+                    <p>By using our service, you can enjoy a convenient and eco-friendly transportation option. You can rent an electric car for a few hours or a few days, depending on your needs.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+            <!-- Bottom Panel -->
+            <div class="BottomPanel">
+                <div class="BottomContainer">
+                    <div class="footer-content">
+                        <!-- Logo on the right side -->
+                        <div class="logo">
+                            <img src="AZoomLogoT.png" alt="Company Logo">
+                        </div>
+                        <!-- Newsletter Subscription -->
+                        <div class="newsletter">
+                            <h3>Stay Updated</h3>
+                            <p>Subscribe to our newsletter to receive the latest news and updates.</p>
+                            <form>
+                                <input type="email" name="email" placeholder="Enter your email address">
+                                <button type="submit">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- Login Form (hidden by default) -->
+        <div id="login-popup" class="popup">
+            <div class="popup-content">
+            <form action="action_page.php" method="post">
+                <p>Email</p>
+                <input type="email">
+                <p>Password</p>
+                <input type="password">
+                <button type="submit">Login</button>
+                <ion-icon name="close-outline" id="close-icon"></ion-icon>
+            </form>
+            </div>
+        </div>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </body>
+</html>
